@@ -1,0 +1,29 @@
+<project name="Make PSA Generator" default="dist" basedir=".">
+ 	<description>
+        simple example build file
+    </description>
+
+  	<!-- set global properties for this build -->
+  	<property name="build" location="./war/"/>
+
+
+    <target name="compile" description="compile all files to the web inf drawer">
+
+ <javac srcdir="./src"
+         destdir="./war/WEB-INF/classes"
+         classpath="/Users/flake/tools/gwt-2.4.0/gwt-dev.jar:./:/Users/flake/tools/gwt-2.4.0/gwt-user.jar"
+         debug="on"
+  />
+
+    </target>
+
+   <target name="dist" description="generate the distribution" >
+
+		 <war destfile="voting.war" webxml="./war/WEB-INF/web.xml">
+		  <fileset dir="./war/"/>
+
+		</war>
+	</target>
+
+
+</project>

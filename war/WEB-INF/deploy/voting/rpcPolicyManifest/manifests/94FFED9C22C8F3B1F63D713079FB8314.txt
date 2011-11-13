@@ -1,0 +1,2 @@
+serviceClass: org.metams.voting.client.votingService
+path: DC3F16B4C089E19AC186F40BF58030EE.gwt.rpc
